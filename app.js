@@ -40,7 +40,6 @@ window.addEventListener('load', ()=> {
             return response.json();
           })
           .then(data =>{
-            console.log(data)
             const {temperature, summary} = data.currently;
 
             //inject weather data
