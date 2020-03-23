@@ -1,0 +1,54 @@
+// Main SCSS for shadow.blackcatstudio.com
+// by Jacob Stordahl / jacobstordahl.net
+
+///////////////////////
+// Table of Contents //
+// 1. Modules        //
+// 2. General        //
+// 3. Layout         //
+// 4. Typography     //
+// 5. Geometry       //
+///////////////////////
+
+//Modules import
+  @use 'mixin';
+
+//General
+  html, body{
+    @include mixin.reset;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+//Layout
+  #wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mixin.full-screen;
+    #row-1{
+      display: flex;
+      width: 55vw;
+      justify-content: space-between;
+      #temp-cont{
+        display:flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+    }
+  }
+  #time, #temp, #degree, #desc{
+    text-shadow: 5px 5px 18px #0D0106;
+  }
+  #desc{
+    text-shadow: 5px 5px 12px #0D0106;
+  }
+
+//Typography
+  h1,h2,h3,h4,h5,h6,p,a{
+    @include mixin.font-stack;
+  }
+  h1{font-size:8rem;letter-spacing: 10px;}
+  h3{font-size:3rem; letter-spacing: 30px;}
